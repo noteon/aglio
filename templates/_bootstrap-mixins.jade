@@ -11,22 +11,22 @@ mixin Nav(multipage)
                     a.list-group-item.heading(href="##{(multipage ? 'page:' : '') + slug(resourceGroup.name)}")
                         = resourceGroup.name || 'Resource Group'
                     each resource in resourceGroup.resources
-                        if !condenseNav || (resource.actions.length != 1)
-                            a.list-group-item(href="##{multipage ? 'page:' + slug(resourceGroup.name) + ',header:' : ''}#{slug(resourceGroup.name)}-#{slug(resource.name)}")
-                                i.fa.fa-bars
-                                | &nbsp;
-                                = resource.name || 'Resource'
+                        //- if !condenseNav || (resource.actions.length != 1)
+                        //-     a.list-group-item(href="##{multipage ? 'page:' + slug(resourceGroup.name) + ',header:' : ''}#{slug(resourceGroup.name)}-#{slug(resource.name)}")
+                        //-         i.fa.fa-bars
+                        //-         | &nbsp;
+                        //-         = resource.name || 'Resource'
                             each action in resource.actions
                                 a.list-group-item(href="##{multipage ? 'page:' + slug(resourceGroup.name) + ',header:' : ''}#{slug(resourceGroup.name)}-#{slug(resource.name)}-#{slug(action.method)}", style="padding-left: 32px")
                                     +Icon(action.method)
                                     | &nbsp;
                                     = action.name || action.method + ' ' + resource.uriTemplate
-                        else
-                            a.list-group-item(href="##{multipage ? 'page:' + slug(resourceGroup.name) + ',header:' : ''}#{slug(resourceGroup.name)}-#{slug(resource.name)}")
-                                - var action = resource.actions[0]
-                                +Icon(action.method)
-                                | &nbsp;
-                                = resource.name || action.name || action.method + ' ' + resource.uriTemplate
+                        //- else
+                        //-     a.list-group-item(href="##{multipage ? 'page:' + slug(resourceGroup.name) + ',header:' : ''}#{slug(resourceGroup.name)}-#{slug(resource.name)}")
+                        //-         - var action = resource.actions[0]
+                        //-         +Icon(action.method)
+                        //-         | &nbsp;
+                        //-         = resource.name || action.name || action.method + ' ' + resource.uriTemplate
             each meta in api.metadata
                 if meta.name == 'HOST'
                     p(style="text-align: center")
