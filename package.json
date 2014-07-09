@@ -1,5 +1,5 @@
 {
-  "name": "aglio",
+  "name": "seafish-aglio",
   "version": "1.14.0",
   "description": "An API Blueprint renderer with theme support",
   "main": "lib/main.js",
