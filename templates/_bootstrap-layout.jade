@@ -8,7 +8,8 @@ html
         title= api.name || 'API Documentation'
         block bootstrap-theme
             link(rel="stylesheet", href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css")
-        link(rel="stylesheet", href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css")
+        link(rel="stylesheet", href="/doc-asset/font-awesome-4.1.0/css/font-awesome.min.css")
+        //- link(rel="stylesheet", href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css")
         block styles
             link(rel="stylesheet", href="//fonts.googleapis.com/css?family=Roboto:400,700|Inconsolata|Raleway:200")
             style.
@@ -121,8 +122,10 @@ html
             This page may not display correctly when opened as a local file. Instead, view it from a web server.
 
 
-    script(src="//code.jquery.com/jquery-1.11.0.min.js")
-    script(src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js")
+    //- script(src="//code.jquery.com/jquery-1.11.0.min.js")
+    //- script(src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js")
+    script(src="/doc-asset/jquery-1.11.0.min.js")
+    script(src="/doc-asset/bootstrap.min.js")
     script
         :coffee
             # Show a warning when viewed as a local file, which will break the
